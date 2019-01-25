@@ -14,7 +14,9 @@ def main():
 def problem1():
     x = input(" Enter a word or phrase. Press 'q' to Quit")
     while True:
-        if(x == "q" or x == "Q"):
+        # KEY: You only need to check for one case
+        #if(x == "q" or x == "Q"):
+        if (x.lower() == "q"):
             break
         else:
             x = input("Enter another word or phrase. Press 'q' to Quit")
@@ -54,6 +56,7 @@ def problem2():
     print(str("The average of 1, 2, 3, is ") + problem2_helper(1, 2, 3, "avg"))
     print(str("The sum of 1, 2, 3, is ") + problem2_helper(1, 2, 3, "sum1"))
 
+# KEY: Great job here! Most people missed the AVG one as they failed to group (num1+num2+num3) in parenthesis
 def problem2_helper(num1, num2, num3, an):
 
     if(an == "sum1"):
